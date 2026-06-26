@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src https://www.google.com; img-src 'self' data:; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; form-action 'none';"
+    />
+    <meta
+      name="description"
+      content="ADIVA Pole Studio בנהריה - סטודיו אינטימי ומקצועי לריקוד ואקרובטיקה על עמוד, עם יחס אישי לכל אחת."
+    />
+    <title>ADIVA Pole Studio | סטודיו לריקוד על עמוד בנהריה</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --lavender: #bfa3d2;
+        --lavender-light: #f5effa;
+        --lavender-soft: #eadff3;
+        --purple: #7c5b91;
+        --purple-dark: #51325f;
+        --ink: #2a2430;
+        --muted: #746b7a;
+        --white: #ffffff;
+        --shadow: 0 24px 70px rgba(93, 55, 111, 0.16);
+        --radius: 28px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          "Assistant", "Heebo", "Arial", system-ui, -apple-system, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 34rem),
+          linear-gradient(145deg, #fffafc 0%, #f5effa 48%, #efe2f4 100%);
+        line-height: 1.65;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background:
+          radial-gradient(circle at 18% 20%, rgba(191, 163, 210, 0.28), transparent 18rem),
+          radial-gradient(circle at 86% 12%, rgba(255, 255, 255, 0.85), transparent 22rem),
+          radial-gradient(circle at 82% 82%, rgba(191, 163, 210, 0.24), transparent 24rem);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .page {
+        overflow: hidden;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin-inline: auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(18px);
+        background: rgba(255, 250, 252, 0.78);
+        border-bottom: 1px solid rgba(124, 91, 145, 0.12);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        min-height: 74px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        color: var(--purple-dark);
+        letter-spacing: 0.02em;
+      }
+
+      .brand img {
+        width: 54px;
+        height: 54px;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 0 10px 24px rgba(124, 91, 145, 0.18);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      .nav-links a:hover {
+        color: var(--purple-dark);
+      }
+
+      .hero {
+        padding: 64px 0 84px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.03fr) minmax(320px, 0.97fr);
+        align-items: center;
+        gap: 56px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 18px;
+        padding: 8px 14px;
+        border: 1px solid rgba(124, 91, 145, 0.16);
+        border-radius: 999px;
+        color: var(--purple-dark);
+        background: rgba(255, 255, 255, 0.58);
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--lavender);
+        box-shadow: 0 0 0 7px rgba(191, 163, 210, 0.18);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 700px;
+        margin-bottom: 22px;
+        color: var(--purple-dark);
+        font-family: "Heebo", "Helvetica Neue", sans-serif;
+        font-weight: 100;
+        font-size: clamp(2.7rem, 7vw, 5.9rem);
+        line-height: 1.02;
+        letter-spacing: -0.02em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .hero-copy {
+        max-width: 590px;
+        margin-bottom: 32px;
+        color: var(--muted);
+        font-size: clamp(1.05rem, 2vw, 1.28rem);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0 24px;
+        border-radius: 999px;
+        border: 1px solid rgba(124, 91, 145, 0.2);
+        font-weight: 800;
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease,
+          background 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button.primary {
+        color: var(--white);
+        background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+        box-shadow: 0 18px 38px rgba(81, 50, 95, 0.25);
+      }
+
+      .button.secondary {
+        color: var(--purple-dark);
+        background: rgba(255, 255, 255, 0.68);
+      }
+
+      .hero-card {
+        position: relative;
+      }
+
+      .photo-wrap {
+        position: relative;
+        isolation: isolate;
+        padding: 18px;
+        border-radius: 40px;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: var(--shadow);
+      }
+
+      .photo-wrap::before {
+        content: "";
+        position: absolute;
+        inset: 7% -9% -8% 20%;
+        z-index: -1;
+        border-radius: 40px;
+        background: linear-gradient(145deg, rgba(191, 163, 210, 0.42), rgba(255, 255, 255, 0));
+      }
+
+      .photo-wrap img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 30px;
+      }
+
+      .floating-logo {
+        position: absolute;
+        right: -18px;
+        bottom: -24px;
+        width: min(210px, 44%);
+        padding: 12px;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.88);
+        box-shadow: 0 18px 50px rgba(81, 50, 95, 0.18);
+      }
+
+      .section {
+        padding: 78px 0;
+      }
+
+      .section-heading {
+        max-width: 760px;
+        margin-bottom: 34px;
+      }
+
+      .section-heading.center {
+        margin-inline: auto;
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 14px;
+        color: var(--purple-dark);
+        font-size: clamp(2rem, 4vw, 3.3rem);
+        line-height: 1.05;
+        letter-spacing: -0.035em;
+      }
+
+      .section-heading p {
+        color: var(--muted);
+        font-size: 1.12rem;
+      }
+
+      .about-card {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: 38px;
+        align-items: center;
+        padding: clamp(22px, 4vw, 44px);
+        border: 1px solid rgba(124, 91, 145, 0.12);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.66);
+        box-shadow: var(--shadow);
+      }
+
+      .about-card img {
+        width: 100%;
+        border-radius: 24px;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .about-list {
+        display: grid;
+        gap: 14px;
+        margin: 24px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .about-list li {
+        padding: 15px 18px;
+        border-radius: 18px;
+        color: var(--purple-dark);
+        background: var(--lavender-light);
+        font-weight: 700;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .price-card {
+        padding: 26px;
+        border: 1px solid rgba(124, 91, 145, 0.13);
+        border-radius: 26px;
+        background: rgba(255, 255, 255, 0.75);
+        box-shadow: 0 18px 45px rgba(81, 50, 95, 0.1);
+      }
+
+      .price-card.featured {
+        background: linear-gradient(155deg, rgba(124, 91, 145, 0.96), rgba(191, 163, 210, 0.95));
+        color: var(--white);
+      }
+
+      .price-card h3 {
+        margin-bottom: 8px;
+        color: var(--purple-dark);
+        font-size: 1.55rem;
+      }
+
+      .price-card.featured h3,
+      .price-card.featured .price-note,
+      .price-card.featured .price-row {
+        color: var(--white);
+      }
+
+      .price-note {
+        margin-bottom: 18px;
+        color: var(--muted);
+      }
+
+      .price-list {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .price-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(124, 91, 145, 0.12);
+        color: var(--purple-dark);
+        font-weight: 700;
+      }
+
+      .price-card.featured .price-row {
+        border-bottom-color: rgba(255, 255, 255, 0.24);
+      }
+
+      .price {
+        white-space: nowrap;
+        font-size: 1.18rem;
+      }
+
+      .contact-card {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 22px;
+        align-items: stretch;
+        padding: 18px;
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, 0.72);
+        box-shadow: var(--shadow);
+      }
+
+      .contact-details {
+        padding: clamp(18px, 4vw, 32px);
+      }
+
+      .contact-details p {
+        color: var(--muted);
+      }
+
+      .contact-items {
+        display: grid;
+        gap: 12px;
+        margin: 24px 0;
+      }
+
+      .contact-item {
+        padding: 16px 18px;
+        border-radius: 18px;
+        background: var(--lavender-light);
+        color: var(--purple-dark);
+        font-weight: 800;
+      }
+
+      .map {
+        min-height: 390px;
+        border: 0;
+        border-radius: 22px;
+        overflow: hidden;
+        background: var(--lavender-soft);
+      }
+
+      .map iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 390px;
+        border: 0;
+      }
+
+      .footer {
+        padding: 32px 0 44px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .footer-logo {
+        width: 92px;
+        margin: 0 auto 14px;
+        border-radius: 22px;
+      }
+
+      /* Application Security Requirement: strict static-page CSP, no forms, external navigation hardened with noopener/noreferrer, and Google Maps restricted to an iframe source. */
+
+      @media (max-width: 880px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 14px 0;
+        }
+
+        .nav-links {
+          width: 100%;
+          justify-content: space-between;
+          gap: 10px;
+          font-size: 0.92rem;
+        }
+
+        .hero {
+          padding-top: 42px;
+        }
+
+        .hero-grid,
+        .about-card,
+        .contact-card {
+          grid-template-columns: 1fr;
+        }
+
+        .pricing-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .container {
+          width: min(100% - 22px, 1120px);
+        }
+
+        .section {
+          padding: 56px 0;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+        }
+
+        .actions,
+        .button {
+          width: 100%;
+        }
+
+        .floating-logo {
+          right: 12px;
+          bottom: -20px;
+        }
+
+        .price-card,
+        .about-card,
+        .contact-card {
+          border-radius: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <nav class="container nav" aria-label="ניווט ראשי">
+          <a class="brand" href="#top" aria-label="ADIVA Pole Studio">
+            <img src="assets/logo.jpeg" alt="הלוגו של ADIVA Pole Studio" />
+            <span>ADIVA Pole Studio</span>
+          </a>
+          <div class="nav-links">
+            <a href="#about">על הסטודיו</a>
+            <a href="#pricing">מחירון</a>
+            <a href="#contact">צור קשר</a>
+          </div>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="container hero-grid">
+            <div>
+              <h1>המקום שלך להתחזק, להשתחרר ולרקוד.</h1>
+              <p class="hero-copy">
+                ב-ADIVA Pole Studio מחכה לך מרחב מקצועי, נשי ומזמין עם יחס אישי לכל אחת.
+                שיעורים בקבוצות קטנות, ליווי צמוד ואווירה שמאפשרת לך להתקדם בקצב שלך.
+              </p>
+              <div class="actions" aria-label="אפשרויות יצירת קשר">
+                <a
+                  class="button primary"
+                  href="https://wa.me/972545614775?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%93%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%D7%9D%20%D7%91-ADIVA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  שלחי הודעת וואטסאפ
+                </a>
+                <a class="button secondary" href="tel:+972545614775">התקשרי לעדי</a>
+              </div>
+            </div>
+
+            <div class="hero-card" aria-label="תמונת סטודיו">
+              <div class="photo-wrap">
+                <img src="assets/adi.png" alt="רקדנית על עמוד בסטודיו ADIVA" />
+              </div>
+              <img class="floating-logo" src="assets/logo.jpeg" alt="" aria-hidden="true" />
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="section">
+          <div class="container about-card">
+            <img src="assets/adi.png" alt="אימון ריקוד על עמוד ב-ADIVA Pole Studio" />
+            <div>
+              <div class="section-heading">
+                <p class="eyebrow">למה ADIVA?</p>
+                <h2>סטודיו קטן עם תשומת לב גדולה.</h2>
+                <p>
+                  המקום נבנה עבור מי שרוצה לזוז, להתחזק, ללמוד משהו חדש ולהרגיש בנוח
+                  מהרגע הראשון. השיעורים מתאימים למתחילות וגם למי שכבר התנסתה, עם דגש
+                  על טכניקה, ביטחון, התקדמות אישית וחוויה טובה.
+                </p>
+              </div>
+              <ul class="about-list">
+                <li>קבוצות קטנות ויחס אישי לכל מתאמנת</li>
+                <li>אווירה אינטימית, מקצועית ולא שיפוטית</li>
+                <li>שיעורים שמחברים כוח, גמישות, ביטוי ותנועה</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" class="section">
+          <div class="container">
+            <div class="section-heading center">
+              <h2>בחרי את המסלול שמתאים לך.</h2>
+              <p>אפשר להתחיל באימון ניסיון, להגיע לשיעור בודד או להצטרף למנוי קבוע.</p>
+            </div>
+
+            <div class="pricing-grid">
+              <article class="price-card">
+                <h3>כניסה חד פעמית</h3>
+                <p class="price-note">להיכרות, ניסיון או אימון אישי.</p>
+                <ul class="price-list">
+                  <li class="price-row">
+                    <span>אימון ניסיון</span>
+                    <span class="price">60 ש"ח</span>
+                  </li>
+                  <li class="price-row">
+                    <span>אימון בודד</span>
+                    <span class="price">90 ש"ח</span>
+                  </li>
+                  <li class="price-row">
+                    <span>אימון אישי</span>
+                    <span class="price">200 ש"ח</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="price-card featured">
+                <h3>מנוי חודשי</h3>
+                <p class="price-note">בהוראת קבע, למי שרוצה להתמיד ולהתקדם.</p>
+                <ul class="price-list">
+                  <li class="price-row">
+                    <span>4 כניסות</span>
+                    <span class="price">280 ש"ח</span>
+                  </li>
+                  <li class="price-row">
+                    <span>6 כניסות</span>
+                    <span class="price">370 ש"ח</span>
+                  </li>
+                  <li class="price-row">
+                    <span>8 כניסות</span>
+                    <span class="price">460 ש"ח</span>
+                  </li>
+                  <li class="price-row">
+                    <span>10 כניסות</span>
+                    <span class="price">520 ש"ח</span>
+                  </li>
+                  <li class="price-row">
+                    <span>12 כניסות</span>
+                    <span class="price">570 ש"ח</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="price-card">
+                <h3>כרטיסיות</h3>
+                <p class="price-note">גמישות למי שרוצה להגיע בקצב שלה.</p>
+                <ul class="price-list">
+                  <li class="price-row">
+                    <span>4 כניסות · תוקף 5 שבועות</span>
+                    <span class="price">340 ש"ח</span>
+                  </li>
+                  <li class="price-row">
+                    <span>6 כניסות · תוקף 6 שבועות</span>
+                    <span class="price">440 ש"ח</span>
+                  </li>
+                  <li class="price-row">
+                    <span>8 כניסות · תוקף 6 שבועות</span>
+                    <span class="price">560 ש"ח</span>
+                  </li>
+                  <li class="price-row">
+                    <span>10 כניסות · תוקף 7 שבועות</span>
+                    <span class="price">690 ש"ח</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <div class="container">
+            <div class="section-heading center">
+              <h2>שיעור ראשון מתחיל בהודעה אחת.</h2>
+              <p>אפשר לשלוח וואטסאפ, להתקשר או להגיע אלינו לסטודיו בנהריה.</p>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-details">
+                <h2>צור קשר</h2>
+                <p>
+                  מתלבטת איזה מסלול מתאים לך? שלחי הודעה לעדי ונמצא יחד את נקודת
+                  ההתחלה הנכונה עבורך.
+                </p>
+                <div class="contact-items">
+                  <a class="contact-item" href="tel:+972545614775">054-561-4775</a>
+                  <a
+                    class="contact-item"
+                    href="https://wa.me/972545614775?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%93%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A9%D7%99%D7%A2%D7%95%D7%A8%20%D7%A0%D7%99%D7%A1%D7%99%D7%95%D7%9F"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    שליחת וואטסאפ
+                  </a>
+                  <div class="contact-item">הנרייטה סולד 23, נהריה</div>
+                </div>
+                <a
+                  class="button primary"
+                  href="https://wa.me/972545614775?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%93%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%94%D7%AA%D7%97%D7%99%D7%9C%20%D7%91-ADIVA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  דברי איתנו בוואטסאפ
+                </a>
+              </div>
+
+              <div class="map" aria-label="מפה לכתובת הסטודיו">
+                <iframe
+                  title="מפה ל-ADIVA Pole Studio, הנרייטה סולד 23 נהריה"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=%D7%94%D7%A0%D7%A8%D7%99%D7%99%D7%98%D7%94%20%D7%A1%D7%95%D7%9C%D7%93%2023%20%D7%A0%D7%94%D7%A8%D7%99%D7%94&output=embed"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <img class="footer-logo" src="assets/logo.jpeg" alt="ADIVA Pole Studio" />
+          <p>ADIVA Pole Studio · ריקוד ואקרובטיקה על עמוד · נהריה</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
