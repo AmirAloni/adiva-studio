@@ -12,6 +12,7 @@
       content="ADIVA Pole Studio בנהריה - סטודיו אינטימי ומקצועי לריקוד ואקרובטיקה על עמוד, עם יחס אישי לכל אחת."
     />
     <title>ADIVA Pole Studio | סטודיו לריקוד על עמוד בנהריה</title>
+    <link rel="canonical" href="https://www.adivapole.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -423,6 +424,26 @@
         font-weight: 800;
       }
 
+      .reviews-link-card {
+        display: grid;
+        gap: 12px;
+        margin-top: 22px;
+        padding: 20px;
+        border: 1px solid rgba(124, 91, 145, 0.13);
+        border-radius: 22px;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(245, 239, 250, 0.9));
+      }
+
+      .reviews-link-card p {
+        margin-bottom: 0;
+      }
+
+      .reviews-link-card .stars {
+        color: var(--purple-dark);
+        font-weight: 900;
+        letter-spacing: 0.08em;
+      }
+
       .map {
         min-height: 390px;
         border: 0;
@@ -696,6 +717,18 @@
                 >
                   דברי איתנו בוואטסאפ
                 </a>
+                <div class="reviews-link-card" aria-label="ביקורות Google על ADIVA Pole Studio">
+                  <p class="stars" aria-hidden="true">★★★★★</p>
+                  <p>רוצה לשמוע מה אומרות עלינו? אפשר לקרוא את הביקורות של ADIVA ב-Google.</p>
+                  <a
+                    class="button secondary"
+                    href="https://www.google.com/maps/place/ADIVA+Pole+studio+-+%D7%A1%D7%98%D7%95%D7%93%D7%99%D7%95+%D7%9C%D7%A8%D7%99%D7%A7%D7%95%D7%93+%D7%A2%D7%9C+%D7%A2%D7%9E%D7%95%D7%93+%D7%A0%D7%94%D7%A8%D7%99%D7%94%E2%80%AD/@33.0036536,35.0856409,17z/data=!4m8!3m7!1s0x6c45d9eb82b9a673:0xc8e7dbb2a28a087c!8m2!3d33.0036536!4d35.0882158!9m1!1b1!16s%2Fg%2F11z9n0t1mf?entry=ttu&g_ep=EgoyMDI2MDYyMy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    לביקורות ב-Google
+                  </a>
+                </div>
               </div>
 
               <div class="map" aria-label="מפה לכתובת הסטודיו">
